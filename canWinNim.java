@@ -1,6 +1,6 @@
 //LeetCode 292
 
-public class Solution {
+public class canWinNim {
     public boolean canWinNim(int n) {
         return n % 4 != 0;
     }

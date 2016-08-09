@@ -1,6 +1,6 @@
 //LeetCode 344
 
-public class Solution {
+public class ReverseString {
     public String reverseString(String s) {
         int length = s.length();
 		if(length <= 1)
