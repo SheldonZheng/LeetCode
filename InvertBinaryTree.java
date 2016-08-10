@@ -14,8 +14,6 @@ public class InvertBinaryTree {
     }
 
 
-
-
       private class TreeNode {
           int val;
           TreeNode left;
