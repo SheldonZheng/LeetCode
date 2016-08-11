@@ -22,7 +22,6 @@ public class MaxDepthOfBinaryTree {
     }
 
 
-
      private class TreeNode {
              int val;
              TreeNode left;
