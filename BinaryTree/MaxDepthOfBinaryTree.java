@@ -1,3 +1,5 @@
+package BinaryTree;
+
 /**
  * Created by Baiye on 2016/8/9.
  */
