@@ -19,8 +19,6 @@ public class SwapNodesInPairs {
     }
 
 
-
-
       private class ListNode {
           int val;
           ListNode next;
