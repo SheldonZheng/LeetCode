@@ -9,7 +9,7 @@ import java.util.List;
  * LeetCode.118.Pascal's Triangle
  */
 public class PascalTriangle {
-    public List<List<Integer>> generate(int numRows) {
+    public static List<List<Integer>> generate(int numRows) {
         if(numRows == 0)
             return new ArrayList<>();
 
@@ -27,7 +27,7 @@ public class PascalTriangle {
             }
             else
             {
-                for (int i1 = 0; i1 < p.size(); i1++) {
+                for (int i1 = 0; i1 <= p.size(); i1++) {
                     if(i1 >= p.size())
                         tempResult.add(1);
                     else
@@ -43,8 +43,8 @@ public class PascalTriangle {
                 result.add(tempResult);
                 p = tempResult;
             }
-            
-            
+
+
         }
 
         return result;
