@@ -3,7 +3,7 @@ class Solution {
     public int haammingDistance(int x, int y) {
         int count = 0;
         int i = x ^ y;
-        while (i a!= 0) {
+        while (i != 0) {
             count++;
             //remove last i
             i = i & (i - 1);
