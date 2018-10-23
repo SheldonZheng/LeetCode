@@ -8,7 +8,6 @@ class Solution {
         int []vis = new int[numCourses];
 
         //初始化 存放 前置条件的地方
-        //理论上来说，题目里写了不会有重复的边，应该一个list最大存一个数
         //将访问某个数的先决条件放到这里来
         Map<Integer,ArrayList<Integer>> container = new HashMap<>();
         for (int i = 0; i < prerequisites.length; i++) {
