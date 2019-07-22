@@ -1,4 +1,4 @@
-/**
+**
  * Created by Baiye on 2016/12/7.
  */
 
@@ -9,10 +9,13 @@ import java.util.Set;
  * LeetCode.36.Valid Sudoku
  */
 public class ValidSudoku {
+
     public boolean isValidSudoku(char[][] board) {
         HashSet[] row = new HashSet[9];
         HashSet[] col = new HashSet[9];
         HashSet[] cell = new HashSet[9];
+        //3 * (i / 3) + j / 3
+        //rule
         for (int i = 0; i < 9; i++) {
             row[i] = new HashSet<Character>();
             col[i] = new HashSet<Character>();
@@ -27,9 +30,13 @@ public class ValidSudoku {
                         row[i].add(board[i][j]);
                         col[j].add(board[i][j]);
                         cell[3 * (i / 3) + j / 3].add(board[i][j]);
+                
                     }
+            
                 }
+        
             }
+        
         }
         return true;
     }
