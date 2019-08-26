@@ -8,6 +8,7 @@
  * Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
  * 简单的题目，明显可以看出f(n) = f(n-1) + f(n -2);
  * 不能使用递归，会溢出；使用动态规划；
+ * 2019-08-26
  */
 public class ClimbingsStairs {
     public int climbStairs(int n) {
