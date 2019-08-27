@@ -11,6 +11,7 @@
  *  依旧是动态规划初级题目 定义一个指针指向遍历到此处之前的最小买入值
  *  存储遍历到此处之前的最大收益
  *  即使最小买入值更新 那么最大收益依旧是最大收益
+ *  2019-08-27
  */
 public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
