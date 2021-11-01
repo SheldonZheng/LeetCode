@@ -1,18 +1,19 @@
-//LeetCode 575
+/**
+ * LeetCode 575 Distribute Candies
+ */
 class Solution {
-    public int distributeCandies(int[] candies) {
-        if (candies == null) {
+    public int distributeCandies(int[] candyType) {
+        if (candyType == null || candyType.length == 0) {
             return 0;
         }
-        Set<Integer> kind = new HashSet<>();
-        for (int i = 0; i < candies.length; i++) {
-            kind.add(candies[i]);
+        Set<Integer> container = new HashSet<>();
+        for (int i : candyType) {
+            container.add(i);
         }
-        int half = candies.length / 2;
-        if (kind.size() > half) {
-            return half;
+        if (container.size() < candyType.length / 2) {
+            return container.size();
+        } else {
+            return candyType.length / 2;
         }
-        return kind.size();
-
     }
 }
