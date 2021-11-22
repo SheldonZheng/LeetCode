@@ -3,41 +3,28 @@
  */
 class Solution {
 
-    int []source;
-    int []shuffle;
+        private int[] nums;
 
-    private Random random = new Random();
-
-    public Solution(int[] nums) {
-        source = nums;
-        shuffle = nums.clone();
-
-    }
-
-    private int randRange(int min, int max) {
-        return random.nextInt(max - min) + min;
-    }
-
-    private void swapAt(int i, int j) {
-        int temp = shuffle[i];
-        shuffle[i] = shuffle[j];
-        shuffle[j] = temp;
-    }
-
-
-    /** Resets the array to its original configuration and return it. */
-    public int[] reset() {
-        return source;
-    }
-
-    /** Returns a random shuffling of the array. */
-    public int[] shuffle() {
-        for (int i = 0; i < shuffle.length; i++) {
-            swapAt(i,randRange(i,shuffle.length));
+        public Solution(int[] nums) {
+            this.nums = nums;
         }
-        return shuffle;
+
+        public int[] reset() {
+            return nums;
+        }
+
+        public int[] shuffle() {
+            Random random = new Random();
+            int[] res = nums.clone();
+            for (int i = 0; i < nums.length; i++) {
+                int j = i + random.nextInt(nums.length - i);
+                int temp = res[i];
+                res[i] = res[j];
+                res[j] = temp;
+            }
+            return res;
+        }
     }
-}
 
 /**
  * Your Solution object will be instantiated and called as such:
